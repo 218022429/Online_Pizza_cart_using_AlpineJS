@@ -63,9 +63,9 @@
         paymentAmount: 0,
         paymentMessage: '',
         makePayment() {
-           if (this.paymentAmount === 0) {this.paymentMessage = 'No amount entered!'}
+           if (this.paymentAmount === 0) {this.paymentMessage = 'Not enough money!'}
    
-           if ( this.paymentAmount >= this.cartTotal() ) {this.paymentMessage = 'Payment Successful!'
+           if ( this.paymentAmount >= this.cartTotal() ) {this.paymentMessage = 'Payment Successful: Enjoy your pizza!'
            
                setTimeout (() => {
                    this.payNow = false;
@@ -73,7 +73,7 @@
                    this.showCart = false
                }, 3000);}
            else {
-               this.paymentMessage = 'Payment Failed!'
+               this.paymentMessage = 'Not enough money!'
            }
        },
        clearCart() {
